@@ -13,3 +13,28 @@
 
 
 
+# создали пустой словарь
+products = {}
+
+# три раза запрашиваем товар и цену
+for i in range(3):
+    text = input("Введите название и цену через пробел: ")    # например: яблоко 10
+    parts = text.split()                                      # ['яблоко', '10']
+    name = parts[0]
+    price = int(parts[1])                                      
+    products[name] = price                                    # сохраняем назв и цена
+
+# ищем товар
+find_name = input("Введите название товара для поиска: ")
+
+if find_name in products:
+    price = products[find_name]
+    price_with_percent = price + price * 15 // 100    # использеум целочисленное деление    
+    print("Цена с увеличением на 15%:", price_with_percent)
+else:
+    print("Такого товара нет")
+
+# сумма всех товаров
+total = sum(products.values())
+
+print("Сумма всех товаров:", total)
