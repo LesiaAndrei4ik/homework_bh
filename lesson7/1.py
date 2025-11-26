@@ -5,5 +5,3 @@
 """
 
 
-name = 'Alise'
-print(name)
