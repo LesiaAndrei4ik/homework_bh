@@ -6,15 +6,12 @@
 
 '''
 
-list = ['hello', 'python', 'интерпретатор', 'pep8', "123"]
+items = ['hello', 'python', 'интерпретатор', 'pep8', "123"]
 
 # считааем длину каждого элемента в списке
-result = [
-    len(list[0]), 
-    len(list[1]), 
-    len(list[2]), 
-    len(list[3]), 
-    len(list[4])
-    ]
-
+result = list(map(len, items))
 print(result)
+
+
+# len() возвращает к-во символов в каждой строке, map() применяет len к каждому эл-ту
+# и list() преобразует результат в список.
