@@ -7,3 +7,27 @@
 
 '''
 
+
+phrase = input("Введите фразу минимум из трёх слов: ")
+
+# Разбиваем фразу на слова по пробелам
+words = phrase.split()
+
+result_words = []   # сюда будем складывать обработанные слова
+
+for word in words:  # обрабатываем кажд слово по одному 
+    new_word = ""   # здесь будет слово с повтором букв
+    
+    for i, letter in enumerate(word, start=1):
+        # i — номер позиции буквы (1, 2, 3...)
+        # letter — сама буква
+        
+        new_word += letter * i  # повторяем букву i раз
+    
+    result_words.append(new_word)
+
+# Собираем новую фразу
+result = " ".join(result_words)
+
+print(result)
+
